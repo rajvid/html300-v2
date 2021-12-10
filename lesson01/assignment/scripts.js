@@ -1,33 +1,76 @@
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
 document. addEventListener("DOMContentLoaded", function(){
 
-  // Find the example form, and handle its submit event
-  const exampleForm = document.querySelector('#example-form')
+  let myArray = [5, 8, 23, 25, 60, 80, 30];
 
-  exampleForm.addEventListener('submit', function(event){
-    // Prevent the form from trying to submit to a server
+  //The following function uses Reduce as es6 script
+  const adderForm = document.querySelector('#adder-form')
+
+  adderForm.addEventListener('submit', function(event){
     event.preventDefault()
+    let array = [];
+    let sum = 0;
 
-    // An array that we can transform based on user input
-    let data = [0, 1, 2, 3, 5, 8]
+    //using push to generate array of two numbers and then reduce function provides the sum.
+    array.push(parseInt(document.querySelector('#adder-form .input1').value))
+    array.push(parseInt(document.querySelector('#adder-form .input2').value))
 
-    const inputField = document.querySelector('#example-form .input')
-    const userInput = inputField.value
-    const userNumber = parseInt(userInput)
+    //Added value uses reduce function of es6 to sum up the array numbers.
+    let addedValue = array.reduce(function(sum, value){
+      return sum + value;
+    });
 
-    // If the user's input was a number, push it into the array and continue
-    if(!isNaN(userNumber)){
-      data.push(userNumber)
+    let text = document.createTextNode(`The summation of ${array[0]} and ${array[1]} is : ${addedValue}`)
+    const p = document.createElement('p')
+    p.appendChild(text)
+    adderForm.appendChild(p)
+  });
 
-      // Use reduce to sum all the numbers in the data array
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
+  // Find the divider form, and handle its submit event
+  const dividerForm = document.querySelector('#divider-form')
 
-      // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
-      document.querySelector('#example-form .output').innerHTML = sum
-    }
+  dividerForm.addEventListener('submit', function(event){
+    event.preventDefault()
+    const inputField = document.querySelector('#divider-form .input').value;
+    const denominator = parseInt(inputField);
+    let array = [];
+    //using map funciton of array to map values to new array
+    array = myArray.map(function(value){
+      return (value/denominator);
+    });
+    document.querySelector('#divider-form .output').innerHTML = `Divided Array is: [${array}]`;
+    inputField.value = '';
+  });
 
-    // Clear the form field so the user can try again
-    inputField.value = ''
-  })
+    // Find the Filter form, and handle its submit event
+    const filterForm = document.querySelector('#filter-form')
 
+    filterForm.addEventListener('submit', function(event){
+      event.preventDefault()
+      const inputField = document.querySelector('#filter-form .input').value;
+      const filterValue = parseInt(inputField);
+      let array = [];
+      //array.filter method to filter numbers greater than user value.
+      array = myArray.filter(function(value){
+        return value > filterValue;
+      });
+      document.querySelector('#filter-form .output').innerHTML = `Filtered Array is: [${array}]`;
+      inputField.value = '';
+    });
+
+    // Find the Say-Hi! form, and handle its submit event
+    const sayHiForm = document.querySelector('#say-hi-form')
+
+    sayHiForm.addEventListener('submit', function(event){
+      event.preventDefault();
+      const inputField = document.querySelector('#say-hi-form .input').value;
+      const ifNumber = parseInt(inputField);
+
+      //Using string function
+      if(isNaN(ifNumber)){
+        document.querySelector('#say-hi-form .output').innerHTML = `Hi ${inputField}. I am Ayaan and I am 1 year old!`;
+      } else {
+        document.querySelector('#say-hi-form .output').innerHTML = `Hi ${ifNumber}. You cheated, you are a number! Angry Face.`;
+      }
+    });
 })
