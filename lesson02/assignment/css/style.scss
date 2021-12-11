@@ -4,3 +4,102 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Page grid system to center grid-col class in center of page. 
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 900px 1fr;
+    grid-template-rows: 1fr 475px 1fr;
+}
+
+// Grid column container for 2 column layout for contact card
+.grid-col {
+    //Positioning card in ther center area of grid
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    //Sub grid system for column left and right of card. Left is profile photo and name
+    display: grid;
+    grid-template-columns: 1.1fr 1.9fr;
+    border: 50px solid $lightgray;
+    font-size: $font-size; 
+    color: $darkgray;
+    line-height: 1;
+    &_left {
+        margin: 2rem;
+        text-align: center;
+    } 
+    &_right {
+        background-color: $gray;
+        padding: 1rem; 
+        margin: 2rem;
+        margin-left: 0;
+        &:hover {
+            background-color: darken($gray, 10%);
+        }
+    }
+    &_name{       
+        font-size: 1.5em;
+        font-weight: bold; 
+        margin-bottom: 0;
+    }
+    &_designation {
+        font-size: 1.1em;
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+    &_title {
+        padding-left: 1rem;
+        font-weight: bold;
+    }
+    //Profile Picture
+    &_img {
+        border-radius: 50%;
+        height: auto;
+        max-width: 100%;
+    }
+    &_linkdin {
+        display: flex;
+    }
+    //LinkedIn logo
+    &_img2 {
+        margin-left: 1rem;
+    }
+    &_email {
+        justify-content: center;
+        margin-left: 1rem;   
+    }
+    
+}
+
+//Using media query to translate 2 column grid layout to 2 row grid layout
+@include media-query("mobile") {
+    .grid-container {
+        display: block;
+        margin: 1rem;
+    }
+    .grid-col {
+        display: grid;
+        width: 100%;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        row-gap: 10px;
+        &_left {
+            margin-bottom: 0;
+        } 
+        &_right {
+            margin: 2rem;
+            margin-top: 0.5rem;
+        }
+        &_title {
+            padding-left: 1rem;
+            font-weight: bold;
+        }
+        &_img {
+            max-width: 60%;
+        }
+    }
+}
+
