@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 02</title>
-    </head>
-    <body>
-        <main class="main">
-            <h1>title</h1>
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Card</title>
+</head>
+<body>
+  <!--------------Using Grid Container to position card at center of screen and make it responsive--------------------------->
+  <div class="grid-container">
+      <div class="grid-col">
+        <!---Grid Column left is for profile image, name and designation-->
+          <div class="grid-col_left">
+              <img src="img/headshot.jpg" class="grid-col_img" alt="Image of a person">
+              <h1 class="grid-col_name">Paolo Maldini</h1>
+              <p class="grid-col_designation">Front End Developer</p>
+          </div>
+          <!--Grid Column right is for the profile information-->
+          <div class="grid-col_right">
+            <div class="grid-col_info">
+              <p><span class="grid-col_title">Company: </span>Web Weavers </p>
+              <p><span class="grid-col_title">Experience:</span> 3 Years</p>
+              <p><span class="grid-col_title">School:</span> University of Washington</p>
+              <p><span class="grid-col_title">Major:</span> Marketing</p>
+              <p><span class="grid-col_title">Email:</span> paolo@example.com</p>
+            </div>
+            <!--Used flexbox here to center linkedIn logo and text-->
+            <div class="grid-col_linkdin">
+              <img src="img/linkedin.svg" class="grid-col_img2" alt="linkdin logo"> 
+              <p class="grid-col_email">paolo@example.com</p>
+            </div>
+          </div>
+      </div>
+  </div>
+</body>
 </html>

@@ -1,5 +1,6 @@
-html {
+html, body {
     box-sizing: border-box;
+    height: 100%;
 }
 
 *,
@@ -10,8 +11,4 @@ html {
 
 .main {
     padding: 2rem;
-}
-
-h1 {
-    color: $red;  
 }
