@@ -12,13 +12,49 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
-      </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
-    </form>
+    <h2>My Array is: [5, 8, 23, 25, 60, 80, 30]</h2>
+    <div class="groupform">
+      <h2>1. The form will add two numbers and display it's result.</h2>
+      <form id="adder-form">
+        <label>Enter number 1:
+          <input type="text" class="input1">
+        </label>
+        <label>Enter number 2:
+          <input type="text" class="input2">
+        </label>
+        <input type="submit" value="Sum!">
+      </form>
+    </div>
+    <div class="groupform">
+      <h2>2. Divide the array by the number you submit.</h2>
+      <form id="divider-form">
+        <label>Enter number:
+          <input type="number" class="input">
+        </label>
+        <input type="submit" value="Divide!">
+        <p class="output"></p>
+      </form>
+    </div>
+    <div class="groupform">
+      <h2>3. Filters and shows the numbers greater than selected from my array.</h2>
+      <form id="filter-form">
+        <label>Enter number:
+          <input type="number" class="input">
+        </label>
+        <input type="submit" value="Filter!">
+        <p class="output"></p>
+      </form>
+    </div>
+    <div class="groupform">
+      <h2>4. My Baby says Hi!</h2>
+      <form id="say-hi-form">
+        <label>Enter your Name:
+          <input type="text" class="input">
+        </label>
+        <input type="submit" value="Hi!">
+        <p class="output"></p>
+      </form>
+    </div>
   </main>
 </body>
 
