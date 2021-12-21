@@ -14,8 +14,7 @@ const browsersync = require('browser-sync')
 // Directories
 var paths = {
     scss: './css/',
-    data: './data/',
-    js: './js/'
+    js: './script/'
 };
 
 // Handle changes to .scss files

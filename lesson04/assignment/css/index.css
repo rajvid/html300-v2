@@ -1,0 +1,205 @@
+/* Home Page Styling Using Grids */
+
+/* Image Styling (towers.jpg) */
+
+.grid-col {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;  
+}
+
+.grid-col  img {
+    grid-column-start: 2;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    margin: 200px 0px 20px 0px;
+}
+
+/* Other Content (Featured projects, Parallax, Recent Blog) Styling Using Grid Container */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto auto; 
+    row-gap: 30px;  
+}
+
+/* H1 (Featured Project) Styling */
+
+.headeing {
+    grid-column-start: 2;
+}
+
+.headeing h1 {
+    font-size: 1.7em;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+/* Featured Project List Styling */
+
+.content {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(128px, 33%));
+    row-gap: 70px;
+}
+
+.content-mobile {
+    display: none;
+}
+
+/* Project H2, P And Img Styling */
+
+
+.content h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 3.5em;
+    line-height: 1.2;
+    margin-right: 100px;
+}
+
+.content p {
+    text-align: justify;
+    margin-right: 30px;
+}
+
+.content img {
+    object-fit: cover;
+    height: 260px;
+    width: 100%;
+}
+
+/* Project Second H2 Styling */
+
+.content .style-h2 {
+    margin-right: 0px;
+    margin-left: 100px;
+    text-align: right;
+}
+
+/* Link To Portfolio Page Styling */
+
+.link {
+    margin-bottom: 80px;
+}
+
+.link > a {
+    color: #2f2e2e;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.link a:hover {
+    cursor: pointer;
+}
+
+/* Parallax Effect Backgroung Image Styling */
+
+.parallax {
+    background-image: url("../images/home/spaceneedle.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+/* Recenr Blog Styling */
+
+.blog-content {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 200px;
+}
+
+.blogs  h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.8em;
+    line-height: 1.2;
+    margin-bottom: 10px;  
+}
+
+.blogs .date {
+    font-size: 1.1em;
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.blogs p {
+    margin: 0px 45px 50px 0px;
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: justify;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+    .grid-container {
+        row-gap: 20px;
+    }
+
+    .grid-col img {
+        margin-top: 150px;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .content-mobile {
+        display: block;
+        grid-column-start: 2;
+    }
+
+    .content-mobile h2 {
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+    .content-mobile p {
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .content-mobile img {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .blog-content {
+        display: block;
+    }
+
+    .blogs p, .link {
+        margin-bottom: 20px;
+    }
+
+    .parallax {
+        display: none;
+    }
+
+    .blog-content {
+        margin-bottom: 150px;
+    }
+
+    .blog-content .blogs:nth-child(3) {
+        display: none;
+    }
+}
