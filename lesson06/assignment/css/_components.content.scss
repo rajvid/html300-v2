@@ -1,13 +1,23 @@
-html {
+*{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    height:100%;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.5;
+    background-color: #f9fafa;
+    font-family: rawondemo-font;
 }
 
 *,
 *:after,
 *:before {
     box-sizing: inherit;
-}
-
-.main {
-    padding: 2rem;
 }

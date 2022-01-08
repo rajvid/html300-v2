@@ -1,0 +1,151 @@
+//Styling for the contact page content
+
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+//Added style to H1 text Be in touch
+h1 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 3.2em;
+    line-height: 1.2;
+    margin: 0;
+    //Added margin top-bottom  and changed font size for small screen
+    @include media-query("mobile") {
+        font-size: 2.1em;
+        margin: 1rem 0;
+    }
+    @include media-query("lg") {
+        font-size: 4.2em;
+        margin: 1rem 0;
+    }
+}
+
+//Form styling
+
+//styling for form content
+#fname, #lname, #email, #country, #subject, #message {
+    border-bottom: 2px $black solid;
+}
+
+//removed default padding from class=form-control
+.form-control {
+    padding-bottom: 0;
+}
+
+.col-md-4,.col-md-8 {
+    //input and textarea tag styling
+    input, textarea {
+        border: none;
+        background: transparent;
+        color: $black;
+        font-size: 1em;
+        width: 100%;
+        } 
+        textarea {
+        resize: none;
+        }
+    //label tag styling
+    label { 
+        border: 0;
+        clip: rect(0,0,0,0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    //Select country styling
+    #inputCountry {
+        border: none;
+        background: transparent;
+        font-size: 1.1em;
+        font-weight: lighter;
+        appearance: none;
+        width: 100%;
+        &:defined {
+            color: $gray;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: normal;
+        }
+    }
+    //placeholder styling
+    ::placeholder {
+        font-size: 1.1em;
+        font-style: italic;
+        font-weight: lighter;
+        margin-bottom: 0;
+        color: $gray;
+        //changed font size of placeholder text for small screen
+        @include media-query("mobile") {
+            font-size: 1em;
+        }
+    }
+    *:focus {
+        outline: none;
+    }
+    //Submit button styling 
+    button {
+        display: inline-block;
+        font-size: $font-size;
+        font-style: italic;
+        font-weight: 500;
+        height: 50px;
+        border: none;
+        background: transparent;
+        color: $black;
+        &:hover {
+            color: $gray;
+            cursor: pointer;
+        }
+        //changed font size of submit buttonfor small screen
+        @include media-query("mobile") {
+            font-size: 1em;
+        }
+    }
+}
+
+//Added style to H2 text Subscribe here
+
+h2 {
+    font-weight: 100;
+    font-size: 2.1em;
+    //changed font size of h1 for small screen
+    @include media-query("mobile") {
+        font-size: 1.5em;
+    }
+}
+
+// Map Styling 
+
+.col {
+    iframe {
+    display: block; 
+    width: 100%;
+    height: 500px;
+    margin-top: 25px; 
+        //removed iframe for small screen
+        @include media-query("mobile") {
+            display: none;
+        }
+    }
+}
+
+//tooltip styling
+
+.valid-tooltip, .invalid-tooltip {
+    background: none;   
+}
+
+.valid-tooltip {
+    color: $green;
+}
+
+.invalid-tooltip {
+    color: $red;
+}

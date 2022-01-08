@@ -1,0 +1,104 @@
+//Styling for the index page content
+
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+//Section title H1 styling for large and small screen 
+h1 {
+    font-size: 1.5em;
+    @include media-query("mobile") {
+        font-size: $font-size;
+        margin: 1rem 0 0;
+    }
+
+}
+
+//Project and Blog title H2 styling for large and small screen 
+h2 {
+    font-size: 2.3em;
+    @include media-query("mobile") {
+        font-size: 1.5em;
+        margin: 1rem 0;
+    }
+    @include media-query("lg") {
+        font-size: 3.8em;
+    }
+}
+
+//Project image stling to transform image into a square shape
+#project__img {
+    object-fit: cover;
+    height: 260px;
+    width: 100%;
+    @include media-query("mobile") {
+        object-fit: fill;
+    }
+}
+
+//Adding bottom border at the end of Section for small screen
+#divider {
+    @include media-query("mobile") {
+        border-bottom: 1px dashed $gray;
+    }
+}
+
+//Added top and bottom margin to the view all projects link
+#portfolio__link {
+    @include media-query("mobile") {
+        margin: 1rem 0;
+    }
+}
+
+//Styling for the view all projects link
+#portfolio__link a {
+    color: $black;
+    font-size: $font-size;
+    text-decoration: underline;
+    &:hover {
+        color: $gray;
+    }
+}
+
+//Parallax effect styling for large and small screens
+#parallax__container {
+    background-image: url(../images/spaceneedle.jpg);
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-query("mobile") {
+        //removing parallax effect for small screen
+        display: none;
+    }
+}
+
+//Recent blog content styling
+.col-md-4 {
+    //blog title styling
+    #blog__title {
+        font-size: 2.1em;
+    }
+    //blog post date styling
+    #date {
+        letter-spacing: 6px;
+    }
+    //read more link of the blog styling
+    #link a {
+        color: $black;
+        font-size: $font-size;
+        text-decoration: underline;
+        &:hover {
+            color: $gray;
+        }
+    }
+    @include media-query("mobile") {
+        //smaller screen text styling for blog title
+        #blog__title {
+            font-size: 1.5em;
+        }
+    }
+}
