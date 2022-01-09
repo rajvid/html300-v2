@@ -1,0 +1,94 @@
+//This file styles content of the index.html page using CSS grids
+
+// Importing partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+//grid-container that creates 3 column and 2 row layout for the page
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto auto; 
+    row-gap: 40px;  
+    margin-bottom: 30px;
+    //Changing row gap for smaller screen
+    @include media-query("lg") {
+        row-gap: 20px;
+    }
+    //Setting the grid start position of image container 
+    &__image {
+        grid-column-start: 2;
+        //project image styling
+        img {
+            width: 100%;
+            margin-top: 250px;
+            @include media-query("lg") {
+                margin-top: 170px;
+            }
+        }
+    }
+    //This container creates 2 column layout to display project info side by side
+    &__content {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: grid;
+        grid-template-columns: 1.5fr 3fr;
+        column-gap: 30px;
+        //Changing grid template to rows for smaller screen
+        @include media-query("lg") {
+            grid-template-columns: none;
+            grid-template-rows: auto auto;
+        }
+    }
+    //Styling of the left container which diplays main information about the project
+    &__left {
+        @include media-query("lg") {
+            margin-bottom: 25px;
+            border-bottom: 1px $black solid;
+        }
+        //Styling of project name
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 2.8em;
+            line-height: 1.2;
+            color: $black;
+            //Changing H1 font and margin for smaller screen
+            @include media-query("lg") {
+                margin-bottom: 10px;
+                font-size: 2em;
+            }
+        }
+        //Styling of p tags of left container
+        p {
+            margin-top: 5px;
+            font-size: 1.1em;
+            //Changing margin for smaller screen
+            @include media-query("lg") {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    //Styling of right container which displays detailed info of the project work
+    &__right {
+        //Stylimng of the p tags of right container
+        p {
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        // Adding top margin for the p tags of right container
+        p + p {
+            margin-top: 30px;
+            //Changing margin for smaller screen
+            @include media-query("lg") {
+                margin-top: 15px;
+            }
+        }
+    }
+}
