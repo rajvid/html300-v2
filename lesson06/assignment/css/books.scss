@@ -1,0 +1,48 @@
+//Styling for the books page content
+
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+
+//Chanaged font size of h1 for small screen
+h1 {
+    @include media-query("mobile") {
+        font-size: 1.5em;
+    } 
+}
+
+//Added font styling for h2 tag
+h2 {
+    font-size: 1.8em;
+    //changed font size for small screen
+    @include media-query("mobile") {
+        font-size: 1.3em;
+    }
+}
+
+//Added styling to the accordion collapse button
+.btn-link {
+    font-size: .8em;
+    color: $black;
+    text-decoration: none;
+    &:hover {
+        color: $gray;
+    }
+}
+
+//Parallax effect styling for large and small screens
+#parallax__container {
+    background-image: url(../images/book.jpg);
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-query("mobile") {
+        //removing parallax effect for small screen
+        display: none;
+    }
+}

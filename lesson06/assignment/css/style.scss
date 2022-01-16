@@ -1,6 +1,87 @@
+//Styling for Navbar and Footer of the pages
+
+@import url('https://www.1001fonts.com/rawondemo-font.html');
+
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+//Navbar links styling
+.navbar-light .navbar-nav .nav-link {
+    color: $black;
+    font-size: 1.3em;
+}
+
+//Navbar links styling on hover 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: $gray;
+    background-color: $black;
+}
+
+//Navbar links styling when active
+.navbar-light .navbar-nav .active .nav-link {
+    color: $gray;
+}
+
+//Tagline styling
+#tagline {
+    font-size: 1.3em;
+    @include media-query("mobile") {
+       display: none;
+    }
+}
+
+//Footer styling
+footer {
+    color: $white;
+    width: 100%;
+    bottom: 0;
+    background-color: $black;
+    //Left column text Be in touch styling
+    #left-text {
+        color: $white;
+        font-size: 2em;
+        line-height: 1.2;
+        @include media-query("mobile") {
+            font-size: 1.5em;
+            margin: 1rem 0;
+        }
+        @include media-query("lg") {
+            font-size: 2.8em;
+        }
+    }
+    //contact info p tag styling
+    .col-md-5 p {
+        color: $gray;
+    }
+    //social media link styling for large and small screen
+    .col-md-3 a {
+        text-decoration: none;
+        @include media-query("mobile") {
+            //removed margin and padding from 1st social media icon
+            &:nth-child(1) img{
+                margin-left: 0;
+                padding-left: 0;
+            }
+        }
+    }
+    //social media icon styling
+    .col-md-3 a img {
+        height: 40px;
+        padding: 7px;
+        margin-left: 5px;
+    } 
+    @include media-query("mobile") {
+        //left column text be in touch styling for smaller screen
+        #left-text {
+            font-size: 2em;
+            margin: 1rem 0 0 ;
+        }
+        //adding margin bottom for social media icons for smaller screen
+        .col-md-4 a img  {
+            margin-bottom: 1rem;
+        }
+    }
+}

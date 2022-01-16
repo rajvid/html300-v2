@@ -1,0 +1,79 @@
+//Styling for the portfolio page content
+
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+//Added style to H1 text Featured Project 
+h1 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 3.2em;
+    line-height: 1.2;
+    margin: 0;
+    //Added margin top-bottom  and changed font size for small screen
+    @include media-query("mobile") {
+        font-size: 2.1em;
+        margin: 1rem 0;
+    }
+    @include media-query("lg") {
+        font-size: 4.2em;
+        margin: 1rem 0;
+    }
+}
+
+//Added styling for the project tiles 
+.col-md-6 {
+    //added style for the project image
+    #project__img {
+        object-fit: cover;
+        width: 100%;
+        height: 260px;
+        //added margin top and bottom for small screen
+        @include media-query("mobile") {
+            margin: 1rem 0;
+        }
+    }
+    //added text overlay effect on the project image
+    #projects__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        color: #2f2e2e; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+        text-align: center;
+        //added text and background animation on the project tile
+        & > * {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &:hover > * {
+            transform: translateY(0);
+        }
+    }
+    //added styling to the project overlay text 
+    #projects__title {
+        text-transform: uppercase;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 2.5em;
+        padding: 15px;
+        //changed font size of project overlay text for small screen
+        @include media-query("mobile") {
+            font-size: 1.4em;
+        }
+    }
+}

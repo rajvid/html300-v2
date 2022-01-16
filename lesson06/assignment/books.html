@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/books.css">
+        <title>Assignment 06 - Home</title>
+    </head>
+    <body>
+        <!--Using class sticy top to stick the navbar at the top-->
+        <div class="sticky-top bg-light">
+            <!--Creating a grid layout for navbar-->
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="#"><img src="images/logo-img.png" width="150px" alt="Building Insights logo"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-lg-auto">
+                                <li class="nav-item font-italic px-4">
+                                    <a class="nav-link" href="index.html"> Home </a>
+                                </li>
+                                <li class="nav-item font-italic px-4">
+                                    <a class="nav-link" href="portfolio.html"> Portfolio </a>
+                                </li>
+                                <li class="nav-item font-italic active px-4">
+                                    <a class="nav-link" href="books.html"> Resources  <span class="sr-only">(current)</span> </a>
+                                </li>
+                                <li class="nav-item font-italic px-4">
+                                    <a class="nav-link" href="contact.html"> Contact Us </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <p class="px-3 font-italic" id="tagline">"Envision a taller and a safer future with us!"</p>
+                </div>
+            </div>
+        </div>
+        <section>
+            <!--Created full width container with class container-fluid-->
+            <div class="container-fluid">
+                <!--Using bootstrap grid layout-->
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <img src="images/library.jpg" class="img-fluid"  alt="Image Of The Library">
+                    </div>
+                </div>
+                <!--Using bootstrap grid layout to create nested grid columns in a row container-->
+                <div class="row my-md-4">
+                    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <!--Section Heading-->
+                        <h1 class="text-uppercase">Your Library</h1>
+                        <!--Section text-->
+                        <p>Structural engineering is one of the most complicated engineering. It gets so deep that you should learn all the aspects and it is also important that your basics should be crystal clear. Let us start from scratch and understand all the basics.
+                           Structural Engineering has 4 aspects&#58;</p>
+                        <!--Section ordered list-->
+                        <ol class="px-3 font-italic">
+                            <li>Structural Behaviour</li>
+                            <li>Structural Analysis</li>
+                            <li>Structural Design</li>
+                            <li>Sesmic Analysis and Design</li>
+                        </ol>
+                        <!--Section text-->
+                        <p>In order to master structural engineering, you should learn all four aspects. 
+                            If you fail to conquer any one, you will fail. So read the post carefully.</p> 
+                    </div>
+                    <!--Added w-100 class to force next columns to break to new line-->
+                    <div class="w-100"></div>
+                    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <!--Added nested 2 column layout with bootstrap grids-->
+                        <div class="row my-md-4">
+                            <div class="col-md-4 font-italic text-uppercase">
+                                <!--Aspect heading in col-1-->
+                                <h2>Structural Behaviour</h2>
+                            </div>
+                            <div class="col-md-8 text-justify">
+                                <!--Aspect info in col-2-->
+                                <p>Start with structural behaviour. It is the subject closest to our everyday life 
+                                    and our understanding. Without getting a deep insight of structural behavior, 
+                                    you can never perform correct structural analysis. If I pour water on floor, 
+                                    I know that it will flow from a high point to a low point (Flow under gravity). 
+                                    Similarly structural behavior will be very simple if you perform some in house tests, 
+                                    like bend a scale and see what it does. Bend a sponge and see how its pores behave. 
+                                    In order to understand structural behavior, refer to the following sets of books&#58;</p>
+                                <!--Using accrdion to minimize the book list-->
+                                <div id="accordion">
+                                    <!--Created card for accordion-->
+                                    <div class="card my-3">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <!--Collapse button for accordion-->
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <!--Accordion heading-->
+                                                    Click here to view book List
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <!--Collapsed info (book list) of accordion-->
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card-body font-italic">
+                                                &#8211; The Elements of Structures by W Morgan edited by I.Buckle
+                                                <div class="w-100"></div>
+                                                &#8211; Structures by Schodek and Bechthold
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 font-italic text-uppercase">
+                                <!--Aspect heading in col-1-->
+                                <h2>Structural Analysis</h2>
+                            </div>
+                            <div class="col-md-8 text-justify">
+                                <!--Aspect info in col-2-->
+                                <p>Understanding structural behavior is one thing. That will help you in developing your 
+                                    intuition to understand the deflected shapes for structures under a set of forces. 
+                                    But in order to quantify their deflected shape, the forces and moments, the curvature 
+                                    and deformations you need to valuate it numerically. This numerical evaluation can be 
+                                    done by either simplified set of equations and simplified structure or a complicated set 
+                                    of equations with the entire structure. But this phase is called structural analysis. 
+                                    You either use spreadsheets, software or a pen and a paper to get these values of forces 
+                                    so that you can design the structure. The best books that you can possibly read&#58;</p>
+                                <!--Using accrdion to minimize the book list-->
+                                <div id="accordion">
+                                    <!--Created card for accordion-->
+                                    <div class="card my-3">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <!--Collapse button for accordion-->
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                    <!--Accordion heading-->
+                                                    Static Analysis&#58;
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <!--Collapsed info (book list) of accordion-->
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body font-italic">
+                                                &#8211; Structural Analysis by Devdas Menon
+                                                <div class="w-100"></div>
+                                                &#8211; Advanced Structural Analysis by Devdas Menon
+                                                <div class="w-100"></div>
+                                                &#8211; Structural analysis by R. C. Hibbeler
+                                                <div class="w-100"></div>
+                                                &#8211; Indeterminate structural analysis by C.K. Wang
+                                                <div class="w-100"></div>
+                                                &#8211; Strength of Materials by Stephen Timoshenko
+                                                <div class="w-100"></div>
+                                                &#8211; Structural Analysis: A unified classical matrix approach by A. Ghali, A.M.Neville and T.G.Brown
+                                                <div class="w-100"></div>
+                                                &#8211; Fundamentals of Structural Stability by Simitses and Hodges
+                                                <div class="w-100"></div>
+                                                &#8211; Theory of Elastic Stability by Timoshenko
+                                                <div class="w-100"></div>
+                                                &#8211; Theory of Plates and Shells by Reddy
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Using accrdion to minimize the book list-->
+                                <div id="accordion">
+                                    <!--Created card for accordion-->
+                                    <div class="card my-3">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <!--Collapse button for accordion-->
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                    <!--Accordion heading-->
+                                                    Dynamic Analysis&#58;
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <!--Collapsed info (book list) of accordion-->
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="card-body font-italic">
+                                                &#8211; Dynamics of structures by A.K.Chopra
+                                                <div class="w-100"></div>
+                                                &#8211; Fundamentals of Vibrations by Leonard Meirovitch
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Using accrdion to minimize the book list-->
+                                <div id="accordion">
+                                    <!--Created card for accordion-->
+                                    <div class="card my-3">
+                                        <div class="card-header" id="headingFour">
+                                            <h5 class="mb-0">
+                                                <!--Collapse button for accordion-->
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                    <!--Accordion heading-->
+                                                    Finite Element Analysis&#58;
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <!--Collapsed info (book list) of accordion-->
+                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                            <div class="card-body font-italic">
+                                                &#8211; Fundamentals of Finite element analysis by David Hutton
+                                                <div class="w-100"></div>
+                                                &#8211; Nonlinear finite element analysis by Bathe
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Created parallax effect using bootstrap grid layout, used id=parallax__conatiner to add background image and styling-->
+            <div id="parallax__container"> 
+                <div class="row h-100">
+                    <div class="col-md-12 align-self-center">
+                    </div>
+                </div>
+            </div>
+            <!--Created full width container with class container-fluid-->
+            <div class="container-fluid">
+                <!--Using bootstrap grid layout to create nested grid columns in a row container-->
+                <div class="row my-md-4">
+                    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <!--Added nested 2 column layout with bootstrap grids-->
+                        <div class="row my-md-4">
+                            <div class="col-md-4 font-italic text-uppercase">
+                                <!--Aspect heading in col-1-->
+                                <h2>Structural Design</h2>
+                            </div>
+                            <div class="col-md-8 text-justify">
+                                <!--Aspect info in col-2-->
+                                <p>Now once you evaluate the forces in the structures you are 20% there in completing the structure. Rest all is structural design. 
+                                    It is important to thoroughly understand structural analysis, because if you evaluate the forces wrong, 
+                                    then your design has already failed. It is like opening up a broken umbrella. You know that it is not going to work. 
+                                    So make sure you are good at analysis before you start designing structure. Now design is different for different materials. 
+                                    There is steel and there is reinforced concrete. So here are a few books to understand design of structures.</p>
+                                <!--Using accrdion to minimize the book list-->
+                                <div id="accordion">
+                                    <!--Created card for accordion-->
+                                    <div class="card my-3">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <!--Collapse button for accordion-->
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <!--Accordion heading-->
+                                                    Click here to view book List
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <!--Collapsed info (book list) of accordion-->
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card-body font-italic">
+                                                &#8211; Reinforced Concrete Design by Park and Paulay
+                                                <div class="w-100"></div>
+                                                &#8211; Reinforced Concrete: Mechanics and Design by Wight and MacGregor
+                                                <div class="w-100"></div>
+                                                &#8211; Reinforced Concrete Design by Devdas Menon
+                                                <div class="w-100"></div>
+                                                &#8211; Steel Structures Design by Alan Williams
+                                                <div class="w-100"></div>
+                                                &#8211; Ductile Design of Steel Structures by Michael Bruneau
+                                                <div class="w-100"></div>
+                                                &#8211; Structural Analysis: A unified classical matrix approach by A. Ghali, A.M.Neville and T.G.Brown
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 font-italic text-uppercase">
+                                <!--Aspect heading in col-1-->
+                                <h2>Seismic Analysis and Design</h2>
+                            </div>
+                            <div class="col-md-8 text-justify">
+                                <!--Aspect info in col-2-->
+                                <p>Oh boy, this is my favorite part. I love designing buildings to resist earthquakes. I am living near one of the world’s most 
+                                    dangerous fault (Cascadia subduction zone). Dynamic analysis and design of structure is my favorite topic. I love doing this 
+                                    thing and I could do it forever. Just because it can present the biggest challenges ever. So in order to understand designing 
+                                    of structures in earthquakes you have to study dynamic analysis. You have to be good at mathematics. So here are some books on 
+                                    seismic analysis and design.</p>
+                                <!--Using accrdion to minimize the book list-->
+                                <div id="accordion">
+                                    <!--Created card for accordion-->
+                                    <div class="card my-3">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <!--Collapse button for accordion-->
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                    <!--Accordion heading-->
+                                                    Click here to view book List
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <!--Collapsed info (book list) of accordion-->
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body font-italic">
+                                                &#8211; Modelling for Structural Analysis : Behavior and Basics by Powell
+                                                <div class="w-100"></div>
+                                                &#8211; Seismic Design of reinforced concrete buildings by Jack Moehle
+                                                <div class="w-100"></div>
+                                                &#8211; Seismic Design of Reinforced Concrete and Masonry Buildings by Paulay and Priestley
+                                                <div class="w-100"></div>
+                                                &#8211; Displacement Based Seismic Design by Priestley
+                                                <div class="w-100"></div>
+                                                &#8211; Plastic analysis of steel structures by M Bill wong
+                                                <div class="w-100"></div>
+                                                &#8211; Plasticity in reinforced concrete by Wai Fah Chen
+                                                <div class="w-100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <!--Created full width container with class container-fluid-->
+            <div class="container-fluid">
+                <!--Using bootstrap grid layout to create nested grid columns in a row container-->
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <div class="row my-md-4">
+                            <div class="col-md-3 text-uppercase font-italic" id="left-text">
+                                <!--Title, used id=left-text to add some styling to the text-->
+                                <p>Be In Touch </p>
+                            </div>
+                            <div class="col-md-5 offset-md-1 col-lg-4 align-self-center">
+                                <!--Contact us info-->
+                                <p>Seattle&#44; WA </p>
+                                <p>Thebuildinginsights&#64;gmail&#46;com</p>
+                                <p>Tel &#49; &#48;&#48;&#48; &#8211; &#48;&#48;&#48; &#8211; &#54;&#53;&#48;&#50; </p>
+                                <p>&#169; &#50;&#48;&#50;&#49; by Building Insights </p>
+                            </div>
+                            <div class="col-md-3 col-lg-4 mb-2">
+                                <!--Social media icons with a link to the particular pages-->
+                                <a href="mailto:thebuildinginsights@gmail.com" target="_blank"> <img src="images/gmail.png" alt="Gmail icon"> </a> 
+                                <a href="https://www.linkedin.com/in/jinaldoshi26" target="_blank"> <img src="images/linkedin.png" alt="LinkedIn icon"> </a>
+                                <a href="https://www.youtube.com/c/StructuralMadness" target="_blank"> <img src="images/youtube.png" alt="YouTube icon"> </a>
+                                <a href="https://www.facebook.com/structuralmadness/" target="_blank"> <img src="images/facebook.png" alt="Facebook icon"> </a>
+                                <a href="https://twitter.com/jinal_r_doshi?lang=en" target="_blank"> <img src="images/twitter.png" alt="Twitter icon"> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Attached jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
