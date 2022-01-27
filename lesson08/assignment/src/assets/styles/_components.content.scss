@@ -1,0 +1,24 @@
+//Importing font here
+@import url('https://www.1001fonts.com/rawondemo-font.html');
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    height:100%;
+    width: 100%;
+    font-size: 1.1em;
+    line-height: 1.5;
+    background-color: #ffffff;
+    font-family: 'Rawon Demo', serif !important;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
